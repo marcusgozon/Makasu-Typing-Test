@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Makasu Typing Test</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<div id="app">
+  <div class="header">
+    <div class="shop-name">Makasu2Fast⚡<span>typing test</span></div>
+    <div class="stats-row">
+      <div class="stat">
+        <div class="stat-value" id="wpm-display">–</div>
+        <div class="stat-label">wpm</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <div class="stat-value" id="acc-display">–</div>
+        <div class="stat-label">acc</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="timer-arc">
+        <svg width="44" height="44" viewBox="0 0 44 44">
+          <circle cx="22" cy="22" r="18" fill="none" stroke="#3D2314" stroke-width="3"/>
+          <circle id="timer-ring" cx="22" cy="22" r="18" fill="none" stroke="#C4874A" stroke-width="3"
+            stroke-linecap="round" stroke-dasharray="113.1" stroke-dashoffset="0"/>
+        </svg>
+        <div class="timer-center" id="timer-display">60</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main" id="main-area">
+    <div class="difficulty-row">
+      <span class="diff-label">Word Count</span>
+      <button class="diff-btn active" data-diff="easy">10</button>
+      <button class="diff-btn" data-diff="medium">25</button>
+      <button class="diff-btn" data-diff="hard">50</button>
+    </div>
+
+    <div class="passage-label">type the text below</div>
+    <div class="passage-wrap">
+      <div class="passage-text" id="passage-display"></div>
+    </div>
+
+    <div class="input-area">
+      <input id="typing-input" type="text" placeholder="start typing to begin…"
+        autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+      <button class="btn" id="reset-btn">retry</button>
+    </div>
+  </div>
+
+  <div class="result-overlay" id="result-area">
+    <div class="steam-anim">⚡</div>
+    <div class="result-title" id="result-title">W!</div>
+    <div class="result-subtitle" id="result-sub">W in the Chat!</div>
+    <div class="result-grid">
+      <div class="result-card"><div class="val" id="r-wpm">–</div><div class="lbl">wpm</div></div>
+      <div class="result-card"><div class="val" id="r-acc">–</div><div class="lbl">accuracy</div></div>
+      <div class="result-card"><div class="val" id="r-chars">–</div><div class="lbl">chars</div></div>
+    </div>
+    <button class="btn" id="retry-btn" style="font-size:14px; padding: 11px 28px;">another round</button>
+  </div>
+</div>
+
+<script src="script.js" ></script>
+
+</body>
+</html>
+
